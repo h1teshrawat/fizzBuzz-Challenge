@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FizzBuzz Challenge</title>
+  <link rel="stylesheet" href="./styles.css">
+
+
+</head>
+<body>
+
+  <h1>FizzBuzz Challenge</h1>
+  <p>Click the button to run the FizzBuzz sequence up to 999.</p>
+  <button onclick="runFizzBuzz()">Run FizzBuzz</button>
+
+  <div id="output"></div>
+
+
+  <script>
+    function runFizzBuzz() {
+      let outputDiv = document.getElementById("output");
+      outputDiv.innerHTML = ""; // clear previous results
+
+      for (let count = 1; count <= 999; count++) {
+        let value = "";
+
+        if (count % 3 === 0 && count % 5 === 0) {
+          value = "FizzBuzz";
+        } else if (count % 3 === 0) {
+          value = "Fizz";
+        } else if (count % 5 === 0) {
+          value = "Buzz";
+        } else {
+          value = count;
+        }
+
+        outputDiv.innerHTML += value + "<br>";
+      }
+    }
+  </script>
+
+
+</body>
+</html>
